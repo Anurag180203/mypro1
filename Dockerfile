@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 ENV NODE_ENV=production
@@ -16,4 +16,4 @@ COPY --chown=node:node . .
 
 EXPOSE $PORT
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "index.js" ]
